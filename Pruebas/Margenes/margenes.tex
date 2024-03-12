@@ -1,0 +1,62 @@
+\documentclass[a4paper, 12pt]{article}
+\pagestyle{empty}
+\usepackage[spanish, es-nodecimaldot, mexico]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{biblatex}
+\usepackage{csquotes}
+\usepackage{lipsum}
+\usepackage{layout}
+\usepackage{marginnote}
+%\addtolength{\evensidemargin}{-53pt}
+%\addtolength{\topmargin}{-17pt}
+%\addtolength{\headheight}{22pt}
+%\addtolength{\headsep}{-3pt}
+\usepackage{xcolor}
+\definecolor{azul1}{RGB}{0, 160, 255}
+\usepackage{showframe}
+\renewcommand*\ShowFrameColor{\color{azul1}}
+\usepackage{geometry}
+\geometry{
+	textwidth=140mm, % ANCHURA DEL TEXTO
+	%textheight=150mm, % ALTURA DEL TEXTO
+	lmargin=35mm, % MARGEN IZQUIERDO
+	%rmargin=20mm, % MARGEN DERECHO
+	tmargin=20mm, % MARGEN SUPERIOR
+	bmargin=15mm, % MARGEN INFERIOR
+	headheight=10mm, % ALTURA ENCABEZADO
+	headsep=5mm, % SEPARACIÓN ENTRE EL ENCABEZADO Y EL TEXTO
+	marginparsep=5mm, % SEPARACIÓN ENTRE EL CUERPO Y LOS MARGENES DE NOTAS
+	footnotesep=5mm, % SEPARACIÓN ENTRE EL TEXTO Y LA NOTA A PIE DE PÁGINA
+	footskip=10mm, % SEPARACIÓN ENTRE LA NOTA A PIE DE PÁGINA Y EL PIE DE PÁGINA
+	marginparwidth=25mm, % ANCHURA DE LAS NOTAS EN LOS MÁRGENES
+	showframe=false,
+	showcrop=true
+}
+\begin{document}
+	\color{azul1}
+	\begin{center}
+		\vspace{10mm}
+	\end{center}
+	
+	\begin{center}
+		FORMATO
+		\vspace{10mm}
+	\end{center}
+	
+	\begin{center}
+		En la dirección: C:$\backslash$Users$\backslash$l$\backslash$GitLazg12$\backslash$documentos$\backslash$Pruebas$\backslash$Margenes \\
+		
+		\marginnote{DERECHA: Esta es una nota al margen desplazada 20mm abajo de la página, en relación con la línea en la que está escrita. También está en la nota de margen derrecho.}[20mm]
+		\vspace{10mm}
+		Texto de prueba para verificar el formato.
+		
+		\reversemarginpar\marginnote{IZQUIERDA: Esta es otra nota al margen, pero desplazada 10mm arriba de la página, en relación con la línea en la que está escrita. También está en la nota de margen izquierdo.}[10mm]
+	\end{center}
+	\begin{center}
+		\vspace{10mm}
+		\layout
+	\end{center}
+	\begin{center}
+		\lipsum{1 - 5}
+	\end{center}
+\end{document}
