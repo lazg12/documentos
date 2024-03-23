@@ -1,23 +1,56 @@
+\usepackage[spanish, es-nodecimaldot, mexico]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage[T1]{fontenc}
+\usepackage[useregional]{datetime2}
 
-\usepackage[backend=biber, style=apa, sortcites, url=true]{biblatex}
+\usepackage{titletoc}
+
+\usepackage{ragged2e}
+\usepackage{blindtext}
+\usepackage[left=15mm, right=15mm, top=35mm, bottom=30mm, headheight=25mm, headsep=3mm, marginparsep=0mm, marginparwidth=0mm]{geometry}
+
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=black, linktocpage, hyperfootnotes=true]{hyperref}
 
 \usepackage[table]{xcolor}
-\definecolor{colorRojo1}{rgb}{1.0, 0.03, 0.0}
-\definecolor{colorAzul1}{rgb}{0.0, 0.75, 1.0}
-\definecolor{colorGris1}{rgb}{0.75, 0.75, 0.75}
-\definecolor{colorGris2}{rgb}{0.66, 0.66, 0.66}
-\definecolor{colorGris3}{RGB}{50, 50, 50}
+\definecolor{rojo1}{rgb}{1.0, 0.03, 0.0}
+\definecolor{azul1}{rgb}{0.0, 0.18, 0.65}
+\definecolor{azul2}{rgb}{0.0, 0.75, 1.0}
+\definecolor{gris1}{rgb}{0.75, 0.75, 0.75}
+\definecolor{gris2}{rgb}{0.66, 0.66, 0.66}
+\definecolor{gris3}{RGB}{50, 50, 50}
+\definecolor{verde1}{rgb}{0.22, 0.88, 0.08}
 
-\title{C Íntegro}
-\author{Luis Zambrano G.}
-\date{Fecha}
+\usepackage{setspace}
 
-\usepackage{lastpage}
+
+\usepackage{enumerate}
+
+\usepackage{courierten}
+\renewcommand*\familydefault{\ttdefault}
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx}
+\graphicspath{{./imagenes}}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{overpic}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{colortbl}
+
+\usepackage{mathtools}
+
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-{\lhead{\includegraphics[width=0.15\textwidth]{cLogo}}}
-\chead{\autor}
-{\rhead{Domingo \DTMsetstyle{ddmmyyyy}\fechainicio}}
+\usepackage{lastpage}
+
+
+\lfoot{\textcolor{gris2} {\small \titulo}}
+\rfoot{\textcolor{gris2}{\small Página. \thepage\ / \pageref{LastPage}}}
+\cfoot{ }
+\lhead{\includegraphics[width=0.15\textwidth]{cLogo}}
+
+\urlstyle{sf}
+

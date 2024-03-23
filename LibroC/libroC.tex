@@ -1,23 +1,21 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[,a4paper,11pt]{book}
 
 \input{configuraciones/paquetes}
-
-
-
+\hfuzz=15mm
 \begin{document}
 	
 	\input{configuraciones/inicial}
 	
-	\input{secciones/00portada}
+	\input{estructura/00portada}
 	
-	\maketitle
-	
-	\begin{abstract}
-		Resumen
-	\end{abstract}
-	
+	\color{black}
+
 	\tableofcontents
 	
-	Contenido del documento
+	\clearpage
+	
+	\input{estructura/01Introduccion}
+	
+	\input{estructura/02Variables}
 	
 \end{document}

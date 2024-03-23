@@ -1,1 +1,10 @@
 \babel@toc {spanish}{}\relax 
+\contentsline {part}{I\hspace {1em}INTRODUCCIÓN}{5}{part.1}%
+\contentsline {chapter}{\numberline {1}Recursos}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Repositorios}{7}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Códigos}{7}{subsection.1.1.1}%
+\contentsline {paragraph}{Facundo Darfe}{7}{section*.2}%
+\contentsline {part}{II\hspace {1em}VARIABLES}{9}{part.2}%
+\contentsline {chapter}{\numberline {2}Variables}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Tipos}{11}{section.2.1}%
+\contentsfinish 
