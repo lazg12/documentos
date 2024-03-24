@@ -1,0 +1,90 @@
+\chapter[Estándar de entrada y salida de datos]{Estándar de entrada y salida de datos}
+\raggedright
+Sirven para ingresar o mostrar datos.
+
+\section [Librería stdio.h]{\#include <stdio.h>}
+Es una librería para entrada por teclado y salida por pantalla de los datos.
+\vspace{1em}
+\begin{itemize}
+	\item {\textbf{stdin}: Suma las variables de tipo entero y real, ejemplo: {$a + b;$}}
+	\item {\textbf{stdout}: Resta las variables de tipo entero y real, ejemplo: {$a - b;$}}
+\end{itemize}
+
+\paragraph{Salida estándar:}
+{printf(CadenaDeControl, dato1, dato2, ...);}
+\begin{itemize}
+	\item {\textbf{CadenaDeControl}: Contiene los tipos de datos y formato para mostrar el mensaje} 
+	\item {\textbf{dato1, dato2, ...}: Contiene las variables, constantes y datos de salida}
+\end{itemize}
+
+\paragraph{Entrada estándar:}
+{scanf(CadenaDeControl, var1, var2, ...);}
+\begin{itemize}
+	\item {\textbf{CadenaDeControl}: Contiene los tipos de datos a ingresar} 
+	\item {\textbf{var1, var2, ...}: Variables del tipo de los códigos de control}
+\end{itemize}
+
+\section [Código de formato]{Código de formato}
+Sirven para convertir los datos que salen por pantalla.
+\vspace{1em}
+\begin{itemize}
+	\item {\textbf{\%d}: El dato se convierte a entero decimal}
+	\item {\textbf{\%o}: El dato se convierte a octal}
+	\item {\textbf{\%x}: El dato se convierte a hexadecimal}
+	\item {\textbf{\%u}: El dato se convierte a entero sin signo}
+	\item {\textbf{\%c}: El dato se convierte a carácter}
+	\item {\textbf{\%e}: El dato se considera de tipo float, se convierte a notación científica}
+	\item {\textbf{\%f}: El dato se convierte a float}
+	\item {\textbf{\%g}: El dato se convierte a float, se convierte a \%e o a \%f}
+	\item {\textbf{\%s}: El dato a mostrar es una cadena de caracteres}
+	\item {\textbf{\%lf}: El dato se considera double}
+	\item {{\Huge \textbf{\textit{\underline{¡¡¡CONSULTAR!!!}}}}: El dato se convierte a binario}
+\end{itemize}
+
+\section [Secuencia de escape]{Secuencia de escape}
+Sirven para mostrar caracteres especiales.
+\vspace{1em}
+\begin{itemize}
+	\item {\textbf{$\backslash$a}: Alarma}
+	\item {\textbf{$\backslash$b}: Retroceso de espacio}
+	\item {\textbf{$\backslash$f}: Avance de página}
+	\item {\textbf{$\backslash$n}: Retorno de carro y avance de línea}
+	\item {\textbf{$\backslash$r}: Retorno de carro}
+	\item {\textbf{$\backslash$t}: Tabulación de 4 espacios}
+	\item {\textbf{$\backslash$v}: Tabulación vertical}
+	\item {\textbf{$\backslash$$\backslash$}: Barra inclinada}
+	\item {\textbf{$\backslash$?}: Signo de interrogación}
+	\item {\textbf{$\backslash$"}: Doble comillas}
+	\item {\textbf{$\backslash$000}: Número octal}
+	\item {\textbf{$\backslash$xhh}: Número hexadecimal}
+	\item {\textbf{$\backslash$0}: Cero, nulo}
+\end{itemize}
+
+\section [Directivas del preprocesador]{Directivas del preprocesador}
+El preprocesador es aquel primer programa que se ejecuta al empezar a compilar.
+
+\vspace{1em}
+Las directivas no son sentencias en C.
+
+\vspace{1em}
+Para escribir en el preprocesador todas las directivas estas empiezan con \# y no terminan con punto y coma.
+
+\vspace{1em}
+{La directivas más utilizadas don: \#include y \#define}
+
+\vspace{1em}
+{La directiva \#include sirve para incluir en nuestro programa librerías o código externo.}
+
+\vspace{1em}
+{Si deseamos incluir librerías propias de C este es el formato: \#include <nombreDelArchivo>}
+
+\vspace{1em}
+{Si deseamos incluir librerías nuestras o de terceros este es el formato: \#include " nombreDelArchivo".}
+
+Tener en cuenta que si el archivo está en la carpeta del proyecto se lo puede escribir directamente de lo contrario se debe poner la ruta.
+
+\vspace{1em}
+{La directiva \#define sirve para definir macros para valores constantes u operaciones y este es el formato: \#define MACRO valor}
+
+\vspace{1em}
+{Las macros como buena práctica de programación se las debe declarar en mayúsculas.}

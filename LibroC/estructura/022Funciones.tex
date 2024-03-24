@@ -1,0 +1,30 @@
+\chapter[Funciones]{Funciones}
+\raggedright
+Una función es un grupo de sentencias que realizan una tarea concreta y como resultado de ella retorna un único valor como respuesta, caso contrario si devuelve cero o más de un valor no es función.
+
+\vspace{1em}
+El retorno de la función se guarda en el nombre de esta, conceptualmente se puede decir o afirmar que el nombre de la función tiene asignado un lugar en la memoria, dicho de otra forma es parecida a como funciona una variable, pero en el ámbito estricto y riguroso no es variable.
+
+\vspace{1em}
+Al declarar una función el compilador de C, guarda un espacio de memoria para el nombre de la función.
+
+\section[Declaración]{Declaración de funciones}
+A continuación se muestra la sintaxis para declarar una función:
+ 
+\begin{verbatim}
+	tipoDeRetorno nombreDeLaFunción(listaDeParámetros){
+		cuerpoDeLaFunción
+		return (espresión);
+	}
+\end{verbatim}
+
+A continuación se muestra una función que suma dos números y devuelve el resultado:
+
+\begin{lstlisting}[language=C, caption={Función que suma dos números y devuelve el resultado}, style=codigoenc]
+	int suma(int num1, int num2){
+		int resultado;
+		
+		resultado = num1 + num2;
+		return resultado;
+	}
+\end{lstlisting}	

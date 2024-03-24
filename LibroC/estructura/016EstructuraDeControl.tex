@@ -1,0 +1,338 @@
+\chapter[Estructuras de control]{Estructuras de control}
+\raggedright
+Permiten modificar el flujo del programa.
+
+\vspace{1em}
+Existen 3 estructuras de control básicas.
+
+\vspace{1em}
+\begin{itemize}
+	\item \textbf{Secuencia}: Se ejecutan los comandos uno tras otro.
+	\item \textbf{Selección}: También llamada decisión, y de acuerdo a la condición cambia el flujo del programa.
+	\item \textbf{Repetición}: Es un bucle que ejecuta los comandos hasta que la condición sea falsa.
+\end{itemize}
+
+\section [Sentencias]{Sentencias}
+Son los comandos que ejecuta el programa y pueden ser simples o compuestas.
+
+
+\vspace{1em}
+{\textbf{Sentencias simples}: Son las que finalizan con punto y coma, por ejemplo: \verb|printf("Hola Mundo");|}
+
+\vspace{1em}
+{\textbf{Sentencias compuestas}: Son el conjunto de sentencias simples encerradas entre llaves, ejemplo:}
+
+\begin{verbatim}
+	{
+		sentencia1;
+		sentencia2;
+	}
+\end{verbatim}	
+
+
+\section [Selección if]{Selección if}
+Es la principal sentencia de selección en C, ejemplo:
+
+\begin{verbatim}
+	if(condición)
+		sentencia
+\end{verbatim}
+
+\section [Selección if - else]{Selección if - else}
+Si no se cumple la condición cambia el flujo del programa, ejemplo:
+
+\begin{verbatim}
+	if(condición)
+		sentencia
+	else
+		sentecia
+\end{verbatim}
+
+\section [Selección anidada]{Selección anidada}
+Es cuando la estructura de control tipo selección tiene dentro del cuerpo una o más estructuras.
+
+\section [Ejercicio]{Ejercicio}
+Hacer un programa que ordene tres números.
+
+\begin{lstlisting}[language=C, caption={Ordena tres números de forma ascendente}, style=codigoenc]
+	#include <stdio.h>
+	
+	int main(void){
+		int numero1;
+		int numero2;
+		int numero3;
+		
+		printf("====== PROGRAMA QUE ORDENA ASCENDENTEMENTE TRES N%cMEROS ======\n\n", 223);
+		printf("Ingrese el primer n%cmero: ", 163);
+		scanf("%d", &numero1);
+		printf("\n");
+		printf("Ingrese el segundo n%cmero: ", 163);
+		scanf("%d", &numero2);
+		printf("\n");
+		printf("Ingrese el tercer n%cmero: ", 163);
+		scanf("%d", &numero3);
+		printf("\n");
+		if((numero1 == numero2) && (numero1 == numero3)){
+			printf("Los tres n%cmeros son iguales y su valor es: %d", 163, numero1);
+		}else{
+			if((numero1 < numero2) && (numero1 < numero3)){
+				if(numero2 < numero3){
+					printf("El orden es: %d, %d, %d", numero1, numero2, numero3);
+				}else{
+					printf("El orden es: %d, %d, %d", numero1, numero3, numero2);
+				}
+			}else{
+				if(numero2 < numero3){
+					if(numero1 < numero3){
+						printf("El orden es: %d, %d, %d", numero2, numero1, numero3);	
+					}else{
+						printf("El orden es: %d, %d, %d", numero2, numero3, numero1);
+					}
+				}else{
+					if(numero1 < numero2){
+						printf("El orden es: %d, %d, %d", numero3, numero1, numero2);
+					}else{
+						printf("El orden es: %d, %d, %d", numero3, numero2, numero1);
+					}	
+				}
+			}
+		}
+	}
+\end{lstlisting}
+
+\section [Selección switch]{Selección switch}
+
+Se utilizan para seleccionar una de entre múltiples alternativas.
+
+\vspace{1em}
+Su selección se basa en el valor de una variable o de una expresión simple.
+
+\vspace{1em}
+La sintaxis se muestra a continuación:
+
+\begin{verbatim}
+	switch(selector){
+		case etiqueta: sentencias; break;
+		case etiqueta: sentencias; break;
+		...
+		default: sentencias; /* OPCIONAL*/
+	}
+\end{verbatim}
+
+\vspace{1em}
+{Tener en cuenta que el selector solo puede ser de tipo int o char.}
+
+\section [Ejercicio]{Ejercicio}
+Hacer un programa que muestre un mensaje dependiendo del tipo de nota, si es A sobresaliente, B Excelente, C muy bueno, D pasable, E malo, F muy malo.
+
+\begin{lstlisting}[language=C, caption={Mostrar mensaje según la nota}, style=codigoenc]
+	#include <stdio.h>
+	
+	int main(void){
+		char nota;
+		
+		printf("====== PROGRAMA QUE MUESTRA UN MENSAJE DEPENDIENDO DE LA NOTA ======\n\n");
+		printf("Ingrese la nota seg%cn el rango (A-F): ",163);
+		scanf("%c", &nota);
+		
+		switch(nota){
+			case 'A': case 'a':
+				printf("Su nota es SOBRESALIENTE.\n");
+				break;
+			case 'B': case 'b':
+				printf("Su nota es EXCELENTE.\n");
+				break;
+			case 'C': case 'c':
+				printf("Su nota es MUY BUENO.\n");
+				break;
+			case 'D': case 'd':
+				printf("Su nota es PASABLE.\n");
+				break;
+			case 'E': case 'e':
+				printf("Su nota es MALA.\n");
+				break;
+			case 'F': case 'f':
+				printf("Su nota es MUY MALA.\n");
+				break;
+			default:
+				printf("La letra de la nota ingresada no es v%clida.\n", 160);
+		}
+	}
+\end{lstlisting}
+
+
+\section [Repetición while]{Repetición while}
+
+Se utilizan para repetir comandos hasta que la condición sea falsa.
+
+\vspace{1em}
+Se lo conoce como ciclo condicionado.
+
+\vspace{1em}
+{Al ciclo while se lo conoce como pre chequeo, porque primero chequea la condición y después ejecuta los comandos.}
+
+\vspace{1em}
+En la condición del ciclo hay una o más variables involucradas.
+
+\vspace{1em}
+{El ciclo while puede que no se ejecute si de entrada la condición es falsa.}
+
+\vspace{1em}
+Las variables involucradas en la condición deben pasar por las siguientes etapas.
+
+\begin{enumerate}
+	\item \textbf{Inicialización}: Todas las variables tienen que haber sido inicializadas.
+	\item \textbf{Prueba/condición}: Primero hace un chequeo del valor que está en la condición y después ejecuta los comandos.
+	\item \textbf{Modificación}: Estar atento que al menos una variable de la condición debe de modificarse y se debe de asegurar que no entre en un ciclo infinito, tener mucho cuidado para no crear ciclos infinitos.
+\end{enumerate}
+
+\vspace{1em}
+La sintaxis se muestra a continuación con una sentencia:
+
+\begin{verbatim}
+	while(condición)
+		sentencia;
+\end{verbatim}
+
+\space{1em}
+La sintaxis de varias sentencias se muestra a continuación:
+
+\begin{verbatim}
+	while(condición){
+		sentencias1;
+		sentencias1;
+		...
+	}
+\end{verbatim}
+
+\section [Ejercicio]{Ejercicio}
+Solicitar al usuario el ingreso de varios números enteros, termina el programa cuando se hayan ingresado 5 números pares.
+
+\begin{lstlisting}[language=C, caption={Ingreso de cinco números pares}, style=codigoenc]
+	#include <stdio.h>
+	
+	int main(void){
+		int numero;
+		int contador = 0;
+		int numerosParesIngresados = 0;
+		
+		printf("====== PROGRAMA QUE SOLO PERMITE INGRESAR CINCO NUMEROS PARES ======\n\n");
+		
+		while(numerosParesIngresados < 5){
+			printf("Hay %d n%cmeros pares ingresados y se han ingresado en total %d n%cmeros, ingrese el siguiente n%cmero: ", numerosParesIngresados, 163, contador, 163, 163);
+			scanf("%d", &numero);
+			if((numero % 2) == 0){
+				numerosParesIngresados++;
+			}
+			contador++;
+			printf("\n");
+		}
+	}
+\end{lstlisting}
+
+\section [Repetición for]{Repetición for}
+
+Se utilizan para repetir comandos hasta que la condición sea falsa y es también conocido como el ciclo incondicionado.
+
+\vspace{1em}
+Se lo utiliza cuando se requiere repetir comandos un número fijo de veces.
+
+\vspace{1em}
+La sintaxis se muestra a continuación:
+
+\begin{verbatim}
+	for(inicialización; condición/iteración; incremento)
+	sentencias
+\end{verbatim}
+
+\space{1em}
+Las partes se muestran a continuación:
+
+\begin{itemize}
+	\item \textbf{Inicialización}: Inicializa las variables de control del bucle, se pueden utilizar una o más variables de control.
+	\item \textbf{Condición}: Contiene la expresión lógica donde hace que el ciclo realice las iteraciones mientras esta condición sea verdadera.
+	\item \textbf{Incremento}: incrementa o decrementa las variables de control.
+	\item \textbf{Sentencias}: Son las instrucciones que se repetirán.
+\end{itemize}
+
+\section [Ejercicio]{Ejercicio}
+Solicitar al usuario N números enteros positivos y mostrar su raíz cuadrada.
+
+\begin{lstlisting}[language=C, caption={Raíz cuadrana de N números positivos}, style=codigoenc]
+	#include <stdio.h>
+	
+	int main(void){
+		int cantidadDeRaices;
+		int i;
+		unsigned int valorDelNumero;
+		
+		printf("====== PROGRAMA QUE MUESTRA LA RAIZ CUADRADA DE LOS NUMEROS ENTEROS POSITIVOS ======\n\n");
+		printf("Cu%cntos n%cmeros enteros positivos desea saber su ra%cz cuadrada: ", 160, 163, 161);
+		scanf("%d", &cantidadDeRaices);
+		
+		for(i = 1; i <= cantidadDeRaices; i++){
+			printf("\n");
+			printf("Ingrese el valor #%d: ", i);
+			scanf("%d", &valorDelNumero);
+			printf("La ra%cz cuadrada de %d es: %.2f", 161, valorDelNumero, sqrt(valorDelNumero));
+		}
+	}
+\end{lstlisting}
+
+
+
+
+
+
+
+
+
+
+
+
+\section [Repetición do - while]{Repetición do - while}
+{El ciclo do - while, se ejecuta al menos una vez.}
+
+\vspace{1em}
+Este ciclo primero se ejecuta y después chequea la condición.
+
+\vspace{1em}
+La sintaxis se muestra a continuación:
+
+\begin{verbatim}
+	do
+		sentencias
+	while(expresión);
+\end{verbatim}
+
+\space{1em}
+Tener en cuenta que termina el comando con punto y coma.
+
+\section [Ejercicio]{Ejercicio}
+Dadas las edades de N personas se desea saber la edad promedio.
+
+\begin{lstlisting}[language=C, caption={Raíz cuadrana de N números positivos}, style=codigoenc]
+	#include <stdio.h>
+	
+	int main(void){
+		int cantidadDePersonas;
+		int i;
+		int edad;
+		int sumaDeEdades = 0;
+		
+		printf("====== PROGRAMA QUE MUESTRA EL PROMEDIO DE EDADES ======\n\n");
+		
+		printf("Cu%cntas edades va a ingresar: ", 160);
+		scanf("%d", &cantidadDePersonas);
+		
+		for(i = 1; i <= cantidadDePersonas; i++){
+			do{
+				printf("El rango de edad es de 0 - 100, ingrese la edad # %d: ", i);
+				scanf("%d", &edad);
+			}while((edad < 0) || (edad > 100));
+			sumaDeEdades += edad;
+		}
+		
+		printf("El promedio de edad de las %d personas es: %d", cantidadDePersonas, sumaDeEdades / cantidadDePersonas);
+	}
+\end{lstlisting}

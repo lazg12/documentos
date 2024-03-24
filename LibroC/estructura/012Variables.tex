@@ -1,0 +1,80 @@
+\chapter[Variables]{Variables}
+	\raggedright
+	Las variables son lo más importante en el lenguaje de programación, ya que almacena algún tipo de dato y tiene un identificador y tipo. 
+	
+	\vspace{1em}
+	En el lenguaje C las variables deben de empezar siempre con una letra y pueden continuar con más letras, números o sub guion, las variables que utilizan como primer carácter el sub guion si están permitidas, pero se las utiliza para el sistema porque muchas veces el compilador de C las utiliza, ya que es para poderlas diferenciar de las variables del código hecho por nosotros.
+	
+	\vspace{1em}
+	Antes de usar una variable siempre se debe de declarar primero y debe de ir al principio del programa, ya que es buena práctica de programación, esto significa que al declararse una variable se le indica al compilador de C que se va a utilizar dicha variable.
+	
+	\vspace{1em}
+	Las palabras que no se pueden utilizar como variables son las reservadas por el lenguaje C, como se muestra en siguiente enlace: \textbf{\textit{\autoref{tab:palabrasReservadas}}}
+	
+	\vspace{1em}
+	Las variables tienen los siguientes atributos:
+	\vspace{1em}
+	\begin{itemize}
+		\item {\textbf{Nombre}} - Es el nombre cuando la declaramos
+		\item {\textbf{Dirección}} - Es donde se encuentra
+		\item {\textbf{Valor}} - Es el contenido literal
+		\item {\textbf{Tipo}} - Es lo que se distingue entre variables
+		\item {\textbf{Tiempo de vida}} - Es hasta cuando se puede utilizar
+		\item {\textbf{Ámbito}} - Es dónde se puede utilizar
+	\end{itemize}
+	
+\section [Tipos]{Tipos}
+	En esta sección se encuentran los tipos de variables utilizados en el lenguaje C.
+	
+	\vspace{1em}
+	\begin{itemize}
+		\item {\textbf{char}} - Carácter, 1 byte, [-128, 127]
+		\item {\textbf{int}} - Entero, 2 o 4 byte, [-2147483648, 2147483647]
+		\item {\textbf{float}} - Real simple, 4 bytes, [$-3.4^{-38}, 3.4^{38}$]
+		\item {\textbf{double}} - Real doble, 8 bytes, [$-1.7^{-308}, 1.7^{308}$]
+		\item {\textbf{void}} - Sin valor, 0 bytes, Sin valor
+		\item {\textbf{*}} - Puntero, guarda direcciones de las variables
+		\item {\textbf{NULL}} - Puntero nulo, no apunta a ninguna dirección
+		\item {\textbf{void *}} - Puntero genérico, se utiliza cuando no se sabe el tipo de dato que va apuntar
+	\end{itemize}
+
+
+\section [Modificadores de tipos]{Modificadores de tipos}
+Es agregarle una característica extra al tipo de dato.
+
+\vspace{1em}
+\begin{itemize}
+	\item {\textbf{short}} - Aplicables a enteros, 2 byte, [-32768, 32767]
+	\item {\textbf{long}} - Aplicables a enteros y reales, duplica el rango del tipo, ejemplo: long int (4 bytes es igual al int), long long int (8 bytes), long double (12 bytes), long long double
+\end{itemize}
+
+\section [Modificadores de signos]{Modificadores de signos}
+Por defecto es {signed}.
+
+\vspace{1em}
+\begin{itemize}
+	\item {\textbf{signed}} - Signo por defecto
+	\item {\textbf{unsigned}} - Enteros sin signos, 4 bytes, [0, 4294967296]
+\end{itemize}
+
+\section [Palabras Reservadas]{Palabras Reservadas}
+	\raggedright
+	\begin{table}[htbp]
+		\centering
+		\caption{Palabras Reservadas}
+		\begin{tabular}{llll}
+			\rowcolor[rgb]{ .816,  .816,  .816} \textbf{auto} & \textbf{{double}} & \textbf{{int}} & \textbf{{struct}} \\
+			\textbf{break} & \textbf{{else}} & \textbf{{long}} & \textbf{{switch}} \\
+			\rowcolor[rgb]{ .816,  .816,  .816} \textbf{{case}} & \textbf{{enum}} & \textbf{{register}} & \textbf{{typedef}} \\
+			\textbf{{char}} & \textbf{{extern}} & \textbf{{return}} & \textbf{{union}} \\
+			\rowcolor[rgb]{ .816,  .816,  .816} \textbf{{const}} & \textbf{{float}} & \textbf{short} & \textbf{{unsigned}} \\
+			\textbf{{continue}} & \textbf{{for}} & \textbf{{signed}} & \textbf{{void}} \\
+			\rowcolor[rgb]{ .816,  .816,  .816} \textbf{default} & \textbf{{goto}} & \textbf{{sizeof}} & \textbf{{volatile}} \\
+			\textbf{do} & \textbf{{if}} & \textbf{{static}} & \textbf{{while}} \\
+		\end{tabular}
+		\label{tab:palabrasReservadas}
+	\end{table}
+	
+
+
+
